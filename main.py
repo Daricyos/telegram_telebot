@@ -11,6 +11,12 @@ def start_bot(message):
     bot.send_message(message.chat.id, lg.st + message.from_user.first_name + lg.st2, reply_markup = kb.ikb)
 
 
+@bot.message_handler(content_types = ['text'])
+def keyboard(message):
+    if message.text == lg.btn2:
+        bot.send_message(message.chat.id, lg.company)
+
+
 
 
 

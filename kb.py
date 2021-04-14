@@ -4,13 +4,14 @@ from telebot import types
 
 
 tikm = types.InlineKeyboardMarkup
-trkm = types.ReplyKeyboardMarkup
 tikb = types.InlineKeyboardButton
+trkm = types.ReplyKeyboardMarkup
+trkb = types.KeyboardButton
 
 #Start button
-ikb = tikm()
-ltn1 = tikb(text = 'Заказать воду', callback_data= 'voda')
-ltn2 = tikb(text = 'О нас', callback_data= 'kompany')
-ltn3 = tikb(text = 'Акции', callback_data= 'promotions')
-ltn4 = tikb(text = 'Контакты', callback_data = 'contacts')
+ikb = trkm(one_time_keyboard=True, resize_keyboard=True, row_width=2)
+ltn1 = trkb(lg.btn1)
+ltn2 = trkb(lg.btn2)
+ltn3 = trkb(lg.btn3)
+ltn4 = trkb(lg.btn4)
 ikb.add(ltn1, ltn2, ltn3, ltn4)
